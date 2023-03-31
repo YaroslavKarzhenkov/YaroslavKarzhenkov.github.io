@@ -11,13 +11,19 @@
         <meta name="prop" value="15872">
                         <link rel="manifest" href="manifest.php-v=1680254439.json" />
                 
-                <script type="module">
-
-            if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register("pwabuilder-sw.js?v=1", {scope: './'});
-            }
-
-        </script>
+                
+        <script>
+ if ('serviceWorker' in navigator) {
+ navigator.serviceWorker
+ .register('/pwabuilder-sw.js?v=1')
+ .then(function (reg) {
+ console.log('Registration succeeded. Scope is ' + reg.scope);
+ })
+ .catch(function (error) {
+ console.error('Trouble with sw: ', error);
+ });
+ }
+</script>
         
         <title>SP2023</title>
 
