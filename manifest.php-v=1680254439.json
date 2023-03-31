@@ -3,7 +3,7 @@
     "name":"SP2023",
     "scope":"/",
     "display":"standalone",
-    "start_url":"https://simple-skye.website/pwa.php",
+    "start_url":"https://yaroslavkarzhenkov.github.io//pwa.php",
     "short_name":"SP2023",
     "theme_color":"#ffffff",
     "description":"SP2023",
@@ -18,24 +18,24 @@
             "purpose":"any"
         }
     ],
-    "url":"https://simple-skye.website/",
+    "url":"https://papadrop.com.ua/",
     "related_applications":[{
         "platform": "webapp",
-        "url": "https://simple-skye.website/manifest.php"
+        "url": "https://yaroslavkarzhenkov.github.io/manifest.php"
     }],
     "screenshots":[
 
     ],
     "generated":"",
     "manifest_package":"org.chromium.webapk.test",
-    "scope_url":"https://simple-skye.website/",
+    "scope_url":"https://yaroslavkarzhenkov.github.io//",
     "intent_filters":{
         "scope_url_scheme":"https",
-        "scope_url_host":"simple-skye.website",
+        "scope_url_host":"yaroslavkarzhenkov.github.io",
         "scope_url_path":"/"
     },
     "display_mode":"standalone",
-    "web_manifest_url":"https://simple-skye.website/manifest.php",
+    "web_manifest_url":"https://yaroslavkarzhenkov.github.io/manifest.php",
     "version_code":"1",
     "version_name":"1.0",
     "bound_webapk":{
