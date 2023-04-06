@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Complete this quiz to best understand your body</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <script async src="https://widget.cloudpayments.ru/bundles/cloudpayments"></script>
+    <script async src="https://yookassa.ru/checkout-widget/v1/checkout-widget.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"
+            integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="app">
+    <div class="bg__top"></div>
+    <section class="body-main quiz-item-main active">
+        <div class="page page--index quiz-main-item active">
+            <!-- <header class="page__header header">
+                <picture>
+                    <source srcset="img/logo.webp" type="image/webp">
+                    <img class="header__logo" src="img/logo.png" alt=""></picture>
+            </header> -->
+            <main class="page__main main">
+                <section class="main__intro intro">
+                    <h2 class="intro__title">Balanced diet and exercises</h2>
+                    <h2 class="intro__title-mobile">Best for women</h2>
+                    <div class="intro__block">
+                        <picture>
+                            <source srcset="img/calc.webp" type="image/webp">
+                            <img class="intro__picture" src="img/calc.png" alt="calculator"></picture>
+                        <div class="intro__text">according to your <span class="intro__accent">age and lifestyle</span>
+                        </div>
+                    </div>
+                </section>
+                <section class="main__ages ages">
+                    <label class="ages__item" for="inp1">
+                        <div class="ages__item-img">
+                            <picture>
+                                <source srcset="img/age1.webp" type="image/webp">
+                                <img class="ages__item-picture" src="img/age1.png" alt="18-24"></picture>
+                        </div>
+                        <div class="ages__item-desc">Age <span
+                                class="ages__item-age ages__item-age--red">18-24</span></div>
+                        <input id="inp1" type="radio" name="ages" value="18">
+                    </label>
+                    <label class="ages__item" for="inp2">
+                        <div class="ages__item-img">
+                            <picture>
+                                <source srcset="img/age2.webp" type="image/webp">
+                                <img class="ages__item-picture" src="img/age2.png" alt="24-35"></picture>
+                        </div>
+                        <div class="ages__item-desc">Age <span
+                                class="ages__item-age ages__item-age--blue">24-35</span></div>
+                        <input id="inp2" type="radio" name="ages" value="24">
+                    </label>
+                    <label class="ages__item" for="inp3">
+                        <div class="ages__item-img">
+                            <picture>
+                                <source srcset="img/age3.webp" type="image/webp">
+                                <img class="ages__item-picture" src="img/age3.png" alt="35-45"></picture>
+                        </div>
+                        <div class="ages__item-desc">Age <span
+                                class="ages__item-age ages__item-age--green">35-45</span></div>
+                        <input id="inp3" type="radio" name="ages" value="35">
+                    </label>
+                    <label class="ages__item" for="inp4">
+                        <div class="ages__item-img">
+                            <picture>
+                                <source srcset="img/age4.webp" type="image/webp">
+                                <img class="ages__item-picture" src="img/age4.png" alt="45+"></picture>
+                        </div>
+                        <div class="ages__item-desc">Age <span
+                                class="ages__item-age ages__item-age--yellow">45+</span></div>
+                        <input id="inp4" type="radio" name="ages" value="45">
+                    </label>
+                </section>
+            </main>
+            <!-- footer-->
+        </div>
+    </section>
+    <main class="quiz">
+        <div class="content">
+            <picture>
+                <!--source(srcset="img/img0.webp" type="image/webp")--><img class="content__img" id="quizBackground"
+                                                                            src="img/img0.png" alt="">
+            </picture>
+            <div class="content__inner">
+                <div class="main">
+                    <div class="main__nav">
+                        <nav class="nav">
+                            <button class="nav__prev" id="backButton" style="opacity: 1"></button>
+                            <div class="nav__logo">
+                                <picture>
+                                    <source srcset="img/logo.webp" type="image/webp">
+                                   <!--  <img class="nav__logo-img" src="img/logo.png" alt=""> --></picture>
+                            </div>
+                            <div class="nav__progress progress">
+                                <div class="progress__label"><span class="progress__label-curr"
+                                                                   id="currentStepProgress">1</span> /<span
+                                        class="progress__label-max" id="maxStepProgress">21</span></div>
+                                <div class="progress__bg">
+                                    <div class="progress__fill" id="progressFill" style="width: 4.7619%"></div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <!-- 1-->
+                    <section class="quiz-item quiz-item--1 main__form form step" id="step1">
+                        <div class="form__scroll">
+                            <div class="form__task">Have you ever had your personalized diet and workout plan?</div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="ration1" type="radio" name="ration" value="1">
+                                        <label class="form-group__label form-group__label--radio" for="ration1"><span
+                                                class="form-group__emoji emoji emoji--no"></span> Never</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="ration2" type="radio" name="ration" value="2">
+                                        <label class="form-group__label form-group__label--radio" for="ration2"><span
+                                                class="form-group__emoji emoji emoji--stop"></span> I had, but never used</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="ration3" type="radio" name="ration" value="3">
+                                        <label class="form-group__label form-group__label--radio" for="ration3"><span
+                                                class="form-group__emoji emoji emoji--yes"></span> Yes, I had</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__action">
+                            <input class="btn btn--cta" type="submit" value="Next">
+                        </div>
+                    </section>
+                    <!-- 2-->
+                    <section class="quiz-item quiz-item--2 main__form form form--with-btn step" id="step2"
+                             data-question="weight_height">
+                        <div class="form__scroll">
+                            <div class="form__task">Write your height and weight for calculations:</div>
+                            <div class="form__group form-group">
+                                <label class="form-group__label form-group__label--hidden" for="high"></label>
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <div class="form-group__emoji emoji emoji--line"></div>
+                                        <span class="form-group__control-unit">cm</span>
+                                        <!-- класс ошибки для инпута - form-group__control-input--error-->
+                                        <input class="form-group__control-input" id="high" type="text" name="height"
+                                               placeholder="Height" inputmode="numeric" pattern="d*" value="">
+                                    </div>
+                                    <!--
+                                    Пример вывода сообщения об ошибке
+                                    <div class="form-group__control-msg">Укажите свой рост</div>
+                                    -->
+                                </div>
+                            </div>
+                            <div class="form__group form-group">
+                                <label class="form-group__label form-group__label--hidden" for="weigh"></label>
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <div class="form-group__emoji emoji emoji--scale"></div>
+                                        <span class="form-group__control-unit">kg</span>
+                                        <input class="form-group__control-input" id="weigh" type="text" name="weight"
+                                               placeholder="Weight" inputmode="numeric" pattern="d*" value="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__action">
+                            <input class="btn btn--cta next-2" type="submit" disabled="" value="Next">
+                        </div>
+                    </section>
+                    <!-- 3-->
+                    <section class="quiz-item quiz-item--3 main__form form form--with-btn step" id="step3"
+                             data-question="wish_weight">
+                        <div class="form__scroll">
+                            <div class="form__task form__task--mbх2">Write your desired weight:</div>
+                            <div class="form__group form-group">
+                                <label class="form-group__label form-group__label--hidden" for="wish_weight"></label>
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <div class="form-group__emoji emoji emoji--dart"></div>
+                                        <span class="form-group__control-unit">kg</span>
+                                        <input class="form-group__control-input" id="wish_weight" type="text"
+                                               name="wish_weight" placeholder="Weight" inputmode="numeric" pattern="d*"
+                                               value="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__action">
+                            <input class="btn btn--cta next-3" type="submit" disabled="" value="Next">
+                        </div>
+                    </section>
+                    <!-- 4-->
+                    <section class="quiz-item quiz-item--4 main__form form form--with-btn step" id="step4"
+                             data-question="imt">
+                        <div class="form__scroll">
+                            <div class="form__imt imt">
+                                <div class="imt__title">Your BMI is:</div>
+                                <div class="imt__value" id="imtValue"></div>
+                                <div class="imt__value-sub">Your weight: <span class="imt__value-desc" id="imtString">Normal</span>
+                                </div>
+                                <div class="imt__line">
+                                    <div class="imt__line-thumb" id="imtPercent"></div>
+                                </div>
+                                <div class="imt__line-labels"><span
+                                        class="imt__line-label">Low weight</span><span class="imt__line-label">Normal</span><span
+                                        class="imt__line-label">Obesity</span></div>
+                                <div class="imt__info">
+                                    <div class="info">
+                                        <div class="info__btn">What's BMI?</div>
+                                        <div class="info__message">Body mass index (BMI) is a person’s weight in kilograms divided by the square of height in meters. BMI is an inexpensive and easy screening method for weight category—underweight, healthy weight, overweight, and obesity.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__diagram diagram">
+                                <div class="diagram__caption">About <span
+                                        class="diagram__caption-value likePercent">92</span>%
+                                    of our readers managed to achieve desired weight, thanks to our personal diets!
+                                </div>
+                                <div class="diagram__picture">
+                                    <div class="diagram__value-container"><span class="diagram__img-value likePercent">92</span>%
+                                    </div>
+                                    <div class="diagram__img"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__action">
+                            <input class="btn btn--cta" type="submit" value="Next">
+                        </div>
+                    </section>
+                    <!-- 5-->
+                    <section class="quiz-item quiz-item--5 main__form form form--with-btn step" id="step5">
+                        <div class="form__scroll">
+                            <h2 class="form__title-q">Harsh extreme diets won't help!</h2>
+                            <p class="form__p form__p--dark">We always remember this and will help you develop new
+                                 good habits without suffering, thereby achieving the desired result and keep it
+                                 for ever!</p>
+                            <div class="form__diagram">
+                                <figure class="chart"><img class="chart__img" src="img/diagram2.svg" alt="diets">
+                                    <figcaption class="chart__legend">
+                                        <div class="chart__legend-group"><span
+                                                class="chart__legend-item chart__legend-item--primary">Extremely limited nutrition</span><span
+                                                class="chart__legend-item chart__legend-item--secondary">Balanced menu</span>
+                                        </div>
+                                        <div class="chart__legend-group"><span
+                                                class="chart__legend-item chart__legend-item--info">Keep in mind that the graph doesn't reflect you personally</span>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="form__action">
+                            <input class="btn btn--cta" type="submit" value="Next">
+                        </div>
+                    </section>
+                    <!-- 6-->
+                    <section class="quiz-item quiz-item--6 main__form form step" id="step6">
+                        <div class="form__scroll">
+                            <div class="form__task">Have your weight changed in either way lately (one-year period, for example)?</div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="weigh1" type="radio" name="weigh" value="1">
+                                        <label class="form-group__label form-group__label--radio" for="weigh1"><span
+                                                class="form-group__emoji emoji emoji--up"></span> Yes, it increased</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="weigh2" type="radio" name="weigh" value="2">
+                                        <label class="form-group__label form-group__label--radio" for="weigh2"><span
+                                                class="form-group__emoji emoji emoji--down"></span> I've lost my weight</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="weigh3" type="radio" name="weigh" value="3">
+                                        <label class="form-group__label form-group__label--radio" for="weigh3"><span
+                                                class="form-group__emoji emoji emoji--ok"></span> No changes to mention</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__action">
+                            <input class="btn btn--cta" type="submit" value="Next">
+                        </div>
+                    </section>
+                    <!-- 7-->
+                    <section class="quiz-item quiz-item--7 main__form form step" id="step7">
+                        <div class="form__scroll">
+                            <div class="form__task">Do you eat breakfast? At what time period?</div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="breakfast1" type="radio" name="breakfast" value="1">
+                                        <label class="form-group__label form-group__label--radio" for="breakfast1"><span
+                                                class="form-group__emoji emoji emoji--7"></span> from 5 to 9 am</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="breakfast2" type="radio" name="breakfast" value="2">
+                                        <label class="form-group__label form-group__label--radio" for="breakfast2"><span
+                                                class="form-group__emoji emoji emoji--9"></span> from 7 to 10 am</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="breakfast3" type="radio" name="breakfast" value="3">
+                                        <label class="form-group__label form-group__label--radio" for="breakfast3"><span
+                                                class="form-group__emoji emoji emoji--10"></span> from 10-11 am to 12-14
+                                            pm</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="breakfast4" type="radio" name="breakfast" value="4">
+                                        <label class="form-group__label form-group__label--radio" for="breakfast4"><span
+                                                class="form-group__emoji emoji emoji--no"></span> I eat nothing for my breakfast</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__action">
+                            <input class="btn btn--cta" type="submit" value="Next">
+                        </div>
+                    </section>
+                    <!-- 8-->
+                    <section class="quiz-item quiz-item--8 main__form form step" id="step8">
+                        <div class="form__scroll">
+                            <div class="form__task">When do you have your lunch?</div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="lunch1" type="radio" name="lunch" value="1">
+                                        <label class="form-group__label form-group__label--radio" for="lunch1"><span
+                                                class="form-group__emoji emoji emoji--10"></span> from 11-12 am to 14
+                                            pm</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="lunch2" type="radio" name="lunch" value="2">
+                                        <label class="form-group__label form-group__label--radio" for="lunch2"><span
+                                                class="form-group__emoji emoji emoji--13"></span> from 13-14 pm to 15
+                                            pm</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="lunch3" type="radio" name="lunch" value="3">
+                                        <label class="form-group__label form-group__label--radio" for="lunch3"><span
+                                                class="form-group__emoji emoji emoji--14"></span> later 15 pm</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="lunch4" type="radio" name="lunch" value="4">
+                                        <label class="form-group__label form-group__label--radio" for="lunch4"><span
+                                                class="form-group__emoji emoji emoji--no"></span> I do not eat lunch</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__action">
+                            <input class="btn btn--cta" type="submit" value="Next">
+                        </div>
+                    </section>
+                    <!-- 9-->
+                    <section class="quiz-item quiz-item--9 main__form form step" id="step9">
+                        <div class="form__scroll">
+                            <div class="form__task">What about evening meal?</div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="diner1" type="radio" name="diner" value="1">
+                                        <label class="form-group__label form-group__label--radio" for="diner1"><span
+                                                class="form-group__emoji emoji emoji--17"></span> 16-18 pm</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="diner2" type="radio" name="diner" value="2">
+                                        <label class="form-group__label form-group__label--radio" for="diner2"><span
+                                                class="form-group__emoji emoji emoji--7"></span> 19-20 pm</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="diner3" type="radio" name="diner" value="3">
+                                        <label class="form-group__label form-group__label--radio" for="diner3"><span
+                                                class="form-group__emoji emoji emoji--9"></span> later 20 pm</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="diner4" type="radio" name="diner" value="4">
+                                        <label class="form-group__label form-group__label--radio" for="diner4"><span
+                                                class="form-group__emoji emoji emoji--no"></span> I do not have dinner</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__action">
+                            <input class="btn btn--cta" type="submit" value="Next">
+                        </div>
+                    </section>
+                    <!-- 10-->
+                    <section class="quiz-item quiz-item--10 main__form form step" id="step10">
+                        <div class="form__scroll">
+                            <div class="form__task">Do you cook at home or prefer deliveries?</div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="food1" type="radio" name="food" value="1">
+                                        <label class="form-group__label form-group__label--radio" for="food1"><span
+                                                class="form-group__emoji emoji emoji--dish"></span> I always cook by myself</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="food2" type="radio" name="food" value="2">
+                                        <label class="form-group__label form-group__label--radio" for="food2"><span
+                                                class="form-group__emoji emoji emoji--burger"></span> I live on deliveries and prepared food</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="food3" type="radio" name="food" value="3">
+                                        <label class="form-group__label form-group__label--radio" for="food3"><span
+                                                class="form-group__emoji emoji emoji--pasta"></span> 50/50</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__action">
+                            <input class="btn btn--cta" type="submit" value="Next">
+                        </div>
+                    </section>
+                    <!-- 11-->
+                    <section class="quiz-item quiz-item--11 main__form form step" id="step11" data-question="products">
+                        <div class="form__scroll">
+                            <div class="form__task form__task--mb-small">Do you like seafood?</div>
+                            <div class="form__cards cards">
+                                <figure class="cards__card card">
+                                    <picture>
+                                        <source srcset="img/card-seafood.webp" type="image/webp">
+                                        <img class="card__img" src="img/card-seafood.png" alt="seafood"></picture>
+                                </figure>
+                                <figure class="cards__card card">
+                                    <picture>
+                                        <source srcset="img/card-fish.webp" type="image/webp">
+                                        <img class="card__img" src="img/card-fish.png" alt="seafood"></picture>
+                                </figure>
+                                <figure class="cards__card card">
+                                    <picture>
+                                        <source srcset="img/card-turkey.webp" type="image/webp">
+                                        <img class="card__img" src="img/card-turkey.png" alt="seafood"></picture>
+                                </figure>
+                                <figure class="cards__card card">
+                                    <picture>
+                                        <source srcset="img/card-chicken.webp" type="image/webp">
+                                        <img class="card__img" src="img/card-chicken.png" alt="seafood"></picture>
+                                </figure>
+                                <figure class="cards__card card">
+                                    <picture>
+                                        <source srcset="img/card-beef.webp" type="image/webp">
+                                        <img class="card__img" src="img/card-beef.png" alt="seafood"></picture>
+                                </figure>
+                                <figure class="cards__card card">
+                                    <picture>
+                                        <source srcset="img/card-pork.webp" type="image/webp">
+                                        <img class="card__img" src="img/card-pork.png" alt="seafood"></picture>
+                                </figure>
+                            </div>
+                            <div class="form__quiz-3 quiz-3">
+                                <button class="btn quiz-3__btn quiz-3__btn--yes" type="button"><span
+                                        class="btn__icon"></span>Like
+                                </button>
+                                <button class="btn quiz-3__btn quiz-3__btn--neutral" type="button"> Neutrally
+                                </button>
+                                <button class="btn quiz-3__btn quiz-3__btn--no" type="button"><span
+                                        class="btn__icon"></span>Hate
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- 12-->
+                    <section class="quiz-item quiz-item--12 main__form form step" id="step12">
+                        <div class="form__scroll">
+                            <div class="form__task">Do you move a lot during the day?</div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="activity1" type="radio" name="activity" value="1">
+                                        <label class="form-group__label form-group__label--radio" for="activity1"><span
+                                                class="form-group__emoji emoji emoji--home"></span> No, I'm always at home</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="activity2" type="radio" name="activity" value="2">
+                                        <label class="form-group__label form-group__label--radio" for="activity2"><span
+                                                class="form-group__emoji emoji emoji--notebook"></span> No, I always sit at my office</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="activity3" type="radio" name="activity" value="3">
+                                        <label class="form-group__label form-group__label--radio" for="activity3"><span
+                                                class="form-group__emoji emoji emoji--hiking"></span> Fairly enough, I walk 10,000 steps during the day</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="activity4" type="radio" name="activity" value="4">
+                                        <label class="form-group__label form-group__label--radio" for="activity4"><span
+                                                class="form-group__emoji emoji emoji--sport"></span> Fairly enough, I workout 2-3 times a week</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="activity5" type="radio" name="activity" value="5">
+                                        <label class="form-group__label form-group__label--radio" for="activity5"><span
+                                                class="form-group__emoji emoji emoji--muscle"></span> A lot, I workout 5 times a week and move a lot!</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__action">
+                            <input class="btn btn--cta" type="submit" value="Next">
+                        </div>
+                    </section>
+                    <!-- 13-->
+                    <section class="quiz-item quiz-item--13 main__form form step" id="step13">
+                        <div class="form__scroll">
+                            <div class="form__task">How many hours lasts your working day?</div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="work1" type="radio" name="work" value="1">
+                                        <label class="form-group__label form-group__label--radio" for="work1"><span
+                                                class="form-group__emoji emoji emoji--clock"></span> I work 8+ hours</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="work2" type="radio" name="work" value="2">
+                                        <label class="form-group__label form-group__label--radio" for="work2"><span
+                                                class="form-group__emoji emoji emoji--stopwatch"></span> I work less than 8 hours</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="work3" type="radio" name="work" value="3">
+                                        <label class="form-group__label form-group__label--radio" for="work3"><span
+                                                class="form-group__emoji emoji emoji--night"></span> I work at night</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="work4" type="radio" name="work" value="4">
+                                        <label class="form-group__label form-group__label--radio" for="work4"><span
+                                                class="form-group__emoji emoji emoji--wave"></span> It differs, since
+                                             I have a flexible schedule</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="work5" type="radio" name="work" value="5">
+                                        <label class="form-group__label form-group__label--radio" for="work5"><span
+                                                class="form-group__emoji emoji emoji--cool"></span> I don't work for now</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__action">
+                            <input class="btn btn--cta" type="submit" value="Next">
+                        </div>
+                    </section>
+                    <!-- 14-->
+                    <section class="quiz-item quiz-item--14 main__form form step" id="step14">
+                        <div class="form__scroll">
+                            <div class="form__task">How many hours a day do you sleep?</div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="sleep1" type="radio" name="sleep" value="1">
+                                        <label class="form-group__label form-group__label--radio" for="sleep1"><span
+                                                class="form-group__emoji emoji emoji--sleepy"></span> less than 4-5
+                                            hours</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="sleep2" type="radio" name="sleep" value="2">
+                                        <label class="form-group__label form-group__label--radio" for="sleep2"><span
+                                                class="form-group__emoji emoji emoji--sweat"></span> 6-7 hours</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="sleep3" type="radio" name="sleep" value="3">
+                                        <label class="form-group__label form-group__label--radio" for="sleep3"><span
+                                                class="form-group__emoji emoji emoji--hug"></span> 8 hours</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="sleep4" type="radio" name="sleep" value="4">
+                                        <label class="form-group__label form-group__label--radio" for="sleep4"><span
+                                                class="form-group__emoji emoji emoji--yes"></span> 8+ hours</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__action">
+                            <input class="btn btn--cta" type="submit" value="Next">
+                        </div>
+                    </section>
+                    <!-- 15-->
+                    <section class="quiz-item quiz-item--15 main__form form step" id="step15">
+                        <div class="form__scroll">
+                            <div class="form__task">Please, describe how you feel waking up in the morning:</div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="mornings1" type="radio" name="mornings" value="1">
+                                        <label class="form-group__label form-group__label--radio" for="mornings1"><span
+                                                class="form-group__emoji emoji emoji--cool"></span> I wake up fast, feeling relaxed</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="mornings2" type="radio" name="mornings" value="2">
+                                        <label class="form-group__label form-group__label--radio" for="mornings2"><span
+                                                class="form-group__emoji emoji emoji--sleepy"></span> I wake up fast, but feel myself sleepy for several hours</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="mornings3" type="radio" name="mornings" value="3">
+                                        <label class="form-group__label form-group__label--radio" for="mornings3"><span
+                                                class="form-group__emoji emoji emoji--displeased"></span> It's hard for me to wake up</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__action">
+                            <input class="btn btn--cta" type="submit" value="Next">
+                        </div>
+                    </section>
+                    <!-- 16-->
+                    <section class="quiz-item quiz-item--16 main__form form step" id="step16">
+                        <div class="form__scroll">
+                            <div class="form__task">Assess the condition of your hair, skin and nails:
+                            </div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="skin1" type="radio" name="skin" value="1">
+                                        <label class="form-group__label form-group__label--radio" for="skin1"><span
+                                                class="form-group__emoji emoji emoji--guilt"></span> Strong, healthy looking</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="skin2" type="radio" name="skin" value="2">
+                                        <label class="form-group__label form-group__label--radio" for="skin2"><span
+                                                class="form-group__emoji emoji emoji--happy"></span> Healthy looking, but still there are moments to fix</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="skin3" type="radio" name="skin" value="3">
+                                        <label class="form-group__label form-group__label--radio" for="skin3"><span
+                                                class="form-group__emoji emoji emoji--ok"></span>
+                                            Satisfactory</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="skin4" type="radio" name="skin" value="4">
+                                        <label class="form-group__label form-group__label--radio" for="skin4"><span
+                                                class="form-group__emoji emoji emoji--inlove"></span> Bad condition</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__action">
+                            <input class="btn btn--cta" type="submit" value="Next">
+                        </div>
+                    </section>
+                    <!-- 17-->
+                    <section class="quiz-item quiz-item--17 main__form form step" id="step17">
+                        <div class="form__scroll">
+                            <div class="form__task">Do you sometimes observe swelling of the face and body?</div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="edema1" type="radio" name="edema" value="1">
+                                        <label class="form-group__label form-group__label--radio" for="edema1"><span
+                                                class="form-group__emoji emoji emoji--sad"></span> Yes</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="edema2" type="radio" name="edema" value="2">
+                                        <label class="form-group__label form-group__label--radio" for="edema2"><span
+                                                class="form-group__emoji emoji emoji--smile"></span> No</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__action">
+                            <input class="btn btn--cta" type="submit" value="Next">
+                        </div>
+                    </section>
+                    <!-- 18-->
+                    <section class="quiz-item quiz-item--18 main__form form step" id="step18">
+                        <div class="form__scroll">
+                            <div class="form__task">Do your hands and feet often freeze?</div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="freeze1" type="radio" name="freeze" value="1">
+                                        <label class="form-group__label form-group__label--radio" for="freeze1"><span
+                                                class="form-group__emoji emoji emoji--hands"></span> I often have cold hands</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="freeze2" type="radio" name="freeze" value="2">
+                                        <label class="form-group__label form-group__label--radio" for="freeze2"><span
+                                                class="form-group__emoji emoji emoji--foot"></span> I often have cold feet</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="freeze3" type="radio" name="freeze" value="3">
+                                        <label class="form-group__label form-group__label--radio" for="freeze3"><span
+                                                class="form-group__emoji emoji emoji--freeze"></span> Both</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="freeze4" type="radio" name="freeze" value="4">
+                                        <label class="form-group__label form-group__label--radio" for="freeze4"><span
+                                                class="form-group__emoji emoji emoji--smile"></span> No, that's not a problem for me</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__action">
+                            <input class="btn btn--cta" type="submit" value="Next">
+                        </div>
+                    </section>
+                    <!-- 19-->
+                    <section class="quiz-item quiz-item--19 main__form form step" id="step19">
+                        <div class="form__scroll">
+                            <div class="form__task">What interests you the most in the topic of beauty, health and weight loss?
+                            </div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="motivation1" type="radio" name="motivation" value="1">
+                                        <label class="form-group__label form-group__label--radio"
+                                               for="motivation1"><span
+                                                class="form-group__emoji emoji emoji--clap"></span> I'm looking for healthy recipes
+                                             and home workout ideas</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="motivation2" type="radio" name="motivation" value="2">
+                                        <label class="form-group__label form-group__label--radio"
+                                               for="motivation2"><span
+                                                class="form-group__emoji emoji emoji--hello"></span> I want to lose weight and
+                                             try the calorie tracker and weight control for the first time</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__group form-group">
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input form-group__control-input--radio"
+                                               id="motivation3" type="radio" name="motivation" value="3">
+                                        <label class="form-group__label form-group__label--radio"
+                                               for="motivation3"><span
+                                                class="form-group__emoji emoji emoji--rocket"></span> I want to lose weight drastically</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__action">
+                            <input class="btn btn--cta" type="submit" value="Next">
+                        </div>
+                    </section>
+                    <!-- 20-->
+                    <section class="quiz-item quiz-item--20 main__form form form--with-btn step" id="step20"
+                             data-question="email">
+                        <div class="form__scroll">
+                            <div class="form__task form__task--mbх2">Write your email address, we will send you the access data to
+                                 your personalized nutrition and exercise plan:
+                            </div>
+                            <div class="form__group form-group">
+                                <label class="form-group__label form-group__label--hidden" for="email"></label>
+                                <div class="form-group__control-box">
+                                    <div class="form-group__control">
+                                        <input class="form-group__control-input" id="eemail" type="text" name="email"
+                                               placeholder="Your e-mail" inputmode="email" value="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__action">
+                            <input class="btn btn--email" type="submit" value="Go to personalized diet solutions" disabled="">
+                        </div>
+                    </section>
+                    <!-- 21-->
+                    <section class="quiz-item quiz-item--21 step" id="step21" data-question="progress">
+                        <main class="page-progress">
+                            <div class="content content--progress">
+                                <div class="content__img"></div>
+                                <div class="content__inner progress-page">
+                                    <div class="progress-page__inner">
+                                        <div class="progress-page__picture">
+                                            <picture>
+                                                <source srcset="img/pr-1.webp" type="image/webp">
+                                                <img class="progress-page__img" id="img" src="img/pr-1.png"
+                                                     alt="progress"></picture>
+                                        </div>
+                                        <div class="progress-page__percentage"><b id="counter">16</b>%</div>
+                                        <div class="progress-page__progress">
+                                            <div class="progress progress--large">
+                                                <div class="progress__bg">
+                                                    <div class="progress__fill" id="progressbar"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="progress-page__label" id="progressLabel">Calculating the data
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </main>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- 22-->
+    <section class="resume quiz-item quiz-item--22">
+        <header class="resume__header header">
+           <!--  <picture>
+                <source srcset="img/logo.webp" type="image/webp">
+                <img class="header__logo" src="img/logo.png" alt=""></picture> -->
+        </header>
+        <main class="resume__main main">
+            <section class="main__plans plans">
+                <h1 class="plans__title">Your personalized fitness and diet plan is ready!</h1>
+                <div class="plans__list">
+                    <div class="plans__item plans__item--ration">
+                       <!--  <picture>
+                            <source srcset="img/dish.webp" type="image/webp">
+                            <img class="plans__item-img" src="img/dish.png" alt="Ration planing"></picture> -->
+                        <div class="plans__item-text">Menu with dishes (less 1900 calories)</div>
+                    </div>
+                    <div class="plans__item plans__item--training">
+                        <picture>
+                            <source srcset="img/training.webp" type="image/webp">
+                            <img class="plans__item-img" src="img/training.png" alt="Ration planing"></picture>
+                        <div class="plans__item-text">Simple full body exercises to train every day
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="main__offer offer">
+                <section class="offer__payment payment">
+                    <h2 class="payment__title">Get personalized plan for</h2>
+                    <div class="payment__price">
+                        <div class="payment__value">1$</div>
+                        <div class="payment__period">40$
+                        </div>
+                    </div>
+                    <div class="payment__form">
+                        <div class="form form--bottom">
+                            <a href="https://papadrop.com.ua/" class="form__button button button--form"><span
+                                    class="payment__btn-img"></span>
+                                <p>Get the plan</p></a>
+                        </div>
+                    </div>
+                </section>
+                <section class="offer__graph graphic">
+                    <div class="graphic__img">
+                        <div class="graphic__label graphic__label--top-left">55 kg</div>
+                        <div class="graphic__label graphic__label--bottom-right">Your goal</div>
+                    </div>
+                    <div class="graphic__period">
+                        <div class="graphic__start">11 August</div>
+                        <div class="graphic__timeline"></div>
+                        <div class="graphic__end">1 January</div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </section>
+    <!-- <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__inner">
+                <div class="footer__item">
+                    <div class="footer__info footer__info--legal">2022 ООО 'TEST'<br>
+                        ИНН: 7839112438<br>
+                        ОГРН: 1197847020580<br>
+                        Тел.: +7 (495) 846 77 03<br>
+                        E-mail: support@skill-pad.com
+                    </div>
+                </div>
+                <div class="footer__item"><p class="footer__info footer__info--title">Платеж защищен:</p>
+                    <div class="footer__pay"><img
+                            src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAEwAAAAYCAMAAABnVuv4AAABp1BMVEUAAACi0aJoyGcqnymK2IiTtZOE2H9fzVxqyGmkp6Sxu7GgoqBQxU1kwmJHvURbxll70Hk+kjtHvENizl+YmJiamppXwVRYwVVwzW130neG0Yazs7M5rTaTlJNRxE6UlJRn0WSZmZlVtVNBqj6bm5tgyF1ozWacnZydnp1pzGVbt1dxz3GjpaNWyFJCuj9m0mNjzmBRxE+mpqZWxFNJvUZSwFBs0WldyFtv0G6foJ9w0m6io6KYmZh81npfzVtFvUJWvFM4szVYyFVfzVxFvEFZx1aWlpacnJx113JkzWKfn5+bnJtl0GSbm5tYv1VexFyeoJ5gwF1KtEdku2JOw0qkpKSurq5kv2GnpqdAuDydnZ2Tk5NUxVGUlJRgzF1ayFhKvkhjz2BjzGBWwlNJr0lXulR1lHKE14BPvEuRkZGmqqY+uTmH24SS2o+hpKGRkZGHlYdWtlQ7szkwoC2ImIikpqRbwVk+pTty1XJ113M4tDVGukNAtz1403Zy0W9uzmtnymRhx15aw1dTwFFMvUm6urqlpaW/v7+vr6+3t7ePnI9lu2Oqqqqve9msAAAAenRSTlMAAw7SGQcR304RDB3k186sTCHczpZ8Z1g0Hgr99uDc0sWyn5+Kh4BrWj4qJRf779zVysS6rqyqkVdIRTs2L/f39vXz6+PdwqinnpxzXFFKLyv29vXx6+rk39rZ2dTNy8i/u62fn4ZjVVVDQTw4KSPv28/Gxr23eHRuZhgnSKcAAAJ3SURBVDjLrdJnUxpBAMbxZy93B3gElV6CgEGqIlICIqixxq5JNBpLLDFqLOlV0xMC6ofO7p3GOUeZcfD34pkbbuY/s8dCtjWcSLyzSLgGusHyX2YmRKpvJf6ccAVRLYur7EqY/cMz5fJsM6ojTLtKwzUAJmddpRFUJ18sTe+BGSmVBlGd9uLxYx2YseKxj1QbK/6PFU9juzu4ghpBXoL6Z4eHLyP1FHt6W8+Budd6hVazr4MuGZDw6tHR0YObMvlp/Vys8EkESO5jpbN52Mk63M2Y+qLWeC52p5UHnF4TLme2yOsHpr6qNSoJDeyjOQ4k6tXUFcSduMluFzi7wGtHo6C43GiYvpUEdsp5iX0x9x7Q/U3tNBYwaXozorjS2xn3bng7O00rYlazsUR/zXLgvRpTvA75eXYvg/J9CvlAY9/VTmItQzwf6MkSflVT4J2OpQWHiLqWeFjkh3qyCGh2RQeHvCcICAMhUPJ2/1BTYqs9IsDrA0BtPw/UPGkDaCxAl28ZIpn+sCD/j3Qn5c8vudne/6n2FExtAx1O38SezmIPtaD6k86CXt8UhcLiZxs0g8V+qV0cazOcxRqSTkQyen0OjG6RXTLBwxa3fqvdVmJGFuujsbTxLNZlpSt2rREA0YUkgQC0L9LBczeRY/tq52NrMbsTwrLRwUG7b4gKXKZLCwdHHMspkveFiDl4etVY7EBNiaXnWGxuHbDF+tI83scMKaI9SBpThpjVibQhZTCOY+uFX/Iol0xSYp/VlNjENh2yHaEzYbVxEMLWcWjv2uxW2wSAyKZ1k72b1I1ZwE7pxyWxy7AYKntzQ+1D5di1Cb8eR0X/AGXavhCaiNl7AAAAAElFTkSuQmCC"
+                            width="36px" height="12px" class="footer__img"> <img
+                            src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAEMAAAAYCAMAAACWXbB1AAACOlBMVEUAAAC4uLlXV1fZ1r2urq67u7vq1KK0tLTWslbfxX3711bw04Lt2qvr047cuGLmzY6ro5nmyXn65Zjs152FhWb73W7duGPu2Zzs2rDkzIRSUlPRp0zpz4jgwXjMzM6/v8Jzc3bmxnDx4KX15rD057NubGlgYU3QqU/03ZL52mhgYF+CgoPVsV/z3pX378Df3uHX19rv3qjq0InfvnLWrltkY2OnqKfq05rixn/15rHozYuGhILOnkH20mRGRkilpaNcXFy60zjw8PD09PSjo6OFhoazzTPf4N/7+/v4+PjX19cAAADp6ejt7e3n7M9ycnKfn5+Nl1twej2jtEm4uLhfX1+HeUtoWzQmHw7Q0NDGx8apqal5eXmupHXhwW6YgD/ImzpfVDYZFQuTlJNVSChEOyQNCwfCwsKKi4t9f3xubm6tnWhqameKg2CtnF2cjVeNdTyvxzZvYDZJOBUtJRXLy8vy3pe8uI++p2ZxbEihhUa1nECAbjnE0y8zMi6TdC1lUiX64yA1Lx9ZRBk9LxTxwADj4+O8vLyipH56d16EflywuFKQg1CojUXNokLEzkGrvz2apTt1ZTmmgC9yWCPjpwDy563VzJCPj4+xrImamn68yHfOt2e6nlx5cFBDRERoX0C1izWEaCzx2BvZoBPnsg/+97rFwou+sYG4sXrLtXiTk3fh13PUxW+Sjm2ir1mrkE/RsDijijXIyCqpnBf1ywng273N0qSYn26VoVK3o0/lwkHAkza1qhjmO+6qAAAAQXRSTlMAjY0G/SMk/f76+XEX/v4zEP3wTv756po8/fz53dG9vLOzp4V1Ivzk4N/V1NHPw729vbmaiHp4cWlWRkHQvbleWZ5vxUQAAAO0SURBVDjLndPnc9JgHMDxKMgoUAQ63HvvvScrkqCJypAle+89BQS0y9Zqa5e107r3nv+bT4KId3rnyfcFx4vc537Pk1+gWiz2ahbrOJsFNRqFJWja3ATa3CRgLWyIoHFbWxlGtc2mDjFaW49wKQ0Y2/nj6kj265vXhWzOluJvqk2y4MC8f3aSfFiwlh9QZ7PZppzx9pveL+ogf+1hkji6dQTHcfGf4efrtawipj78wGsOBG+ongfA7zPVeCT4YB15SVt08utyufwskRAk+pnw3Ol60vR+iLJux0Pz4+6uYZU9n7dPGPx+79SjHesAvn4JjGiVHoUStyKEJKx1tmpIw1KiWycgaO2QbbTLN1pyYFQq5iglWzYkbUNrIGBgMEJXaiQuGENqBBgCRBo9nZ2d/YSxClq0+8nU02TSjip1+TyOobHRrq50avcicKM4jMDiScSKYcjvh6kaPZ/C0v4xMMrFldBBTs4wbJhAUeUkiuY9KGr2PzJEOAeBIYaRuHtSJ1FieispyGSyMzJZ9T7G+sFpPr8kDdqy8hMOp4RaWqbsdrPfgl5azGFGmcQcOjBHhwZ2wrAGIQwggABCGE/DwLhFGCug5c2VVCRlQYMJDu/y5eYM6rh3+16seTkFWkCFEbFSo9PQtfG4AnHCgCCqGoaboJ4e0uC2VYyxVw401LdUbU4kAqijNxaKMbgQaWj0+iV6txYfUVKXuAmjNseVq9fm7s/Nzkr7gbG6LzptMl1CZ0ymYtHENKCWb6bpSt+26hwKnxjTeqg+1wisj5NnqRt37s+9n7179+IuiLttsGCaLqMhBiNjZDB60eiAaaB87AiYgw7uw6mFyT0jX4pMLqzdKWH0vX7/TEQY7I0DxYy515K7TGa0hGwzg4WNtKpB9SkU9A5dXHddodEqPLiTrlFoa8a4/LnoY/jiToi2b2n0VQhc46VqmYjaGF2676dhFcOYxy1xW30eTILoccyptPp+neXDmeGwFBgQu23AplKrAmaLw2GxB29EVMVCMyDI/dDqxS6XmKrrEEucLoWLSrdSO3ByP95+f/fu1sO35H5AtL1tM7dV6XRqsdfrVXlVN3LFtr1cYCzcSie/ueqei4SiWoRRr+UABFrdPGhmGroTaX9392ODepBYDqKjW/SSv+a+UG/DqoXENy44xDNG/S+GxjpfJCfsBR7rEDCI1u+f/89OAYKIvWwPL1OulEqVspG5ZxkNaija9nb+YiaPmWjfRKNQoMZiQ+2C9jWL1oA//90Pzs1u0vcsV2cAAAAASUVORK5CYII="
+                            width="32px" height="12px" class="footer__img"> <img
+                            src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAACcAAAAkCAMAAAA96dOpAAABGlBMVEUAAABppc4+isJam8pkoM9Ul8iCtNlGkMRSlsiVvd9CjMJPlchno85Rlshno849icFGj8Rgn81AjMJEjsRCjcJamso7icFGkcRMksVUl8lPlcZPkshEj8M+isJKkcVRlcdJkcVOk8ZTU1NIkMVOlcdLkcVcm8pin85FRUVMTExJSUlNk8ZQUFBUVFRtpdFhYWFqamt5rdZlZ2mGhoZEREVFRUVHR0dRUVJRlcZYWFpSlsdZWVldXl57e3ukxt98r9RQlMZIf6VXcYdQUVFcX186iMBDQ0Pv9PjIy8+QkpTV2d3BxMc7g7esr7F1dnhAYHdCTldRUlJLS0zd4eSbnZ+XmJqFhojT4u2TvNq4u72mqKk+cZV9f4BeX2CrFHclAAAARXRSTlMAFOU5MEcIp1QP8ndyZh7tmyfRybxf8rGJfHBC29q3rWPKtJODfk1A7urGwZmDRUQ1LCkP9eTaqKaZlmdaHf7+/eWQjXTnxDavAAACJ0lEQVQ4y82S13qbMBiGhYQQhDINBry303i0zh7d7e84TeMkzei+/9uoJJNYffLYx30PEEIvn6RfQmt4fXLQao1eovXsfNydSra214ZtTR/YfLEmTWo5u6vnHkrhz+3dtWj3d1Zo23ti+Hp2+/N8Kni1wjuRo/Mf0+mNDGyt8EbSu5vd39/MxdvzFd6RGPz6+fTi/HS2zhvl3tnF0tPMlLE0DqQQmILehys1T66PhiDBXQMhPe/Al1/c/H3GmS/2S4oARYz5E2yEYpBI83JZ6H0DpQC+bmk0Aqha6BkXDo+PmYy9VA9OrzIk6AF4rvA2dLHmzOOJVwttT56vq0kvBgiN3BOkD4GbB4/3xS2XnSp4FCneBAO8PxoOPy3vgIWBU9GR6qEmQM3IDdXzfPcfbwAQcU9FL9NSAYCp6zMqAAl6CtkAjygeAYBMHWeubDX+v7n0rAH3dMULIZGFoQBApTe2tElc4F0fKfAP1a7ZaGPeatyTp+gBJ9JUj2DIwaZMzSm2uaYS+FhajIhdtrGgEnV09ASNmCZxjbwjMdD/gmt3da2UZRQFJTvQegiZGrFLBBE7s12lfg61CXYaNAhtpz0uWEZUTt6+2SADv9FQShMx0+h7pYbVEeXvS6/2/ds72mQ8dInlJIW+13GsVHhk4VWKNmommep13LHXx5TqOnZ6/iR04jCoObZvNFNKlXmdGiPuYb1uI8ISyh+MopgY3SCu1+vBo/YXdYl22Ue42kQAAAAASUVORK5CYII="
+                            width="13px" height="12px" class="footer__img"> <img
+                            src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAADoAAAAYCAMAAACcAR4nAAABTVBMVEUAAAABaG8NbXQEaXAGbXYAaG8AaXAAaW8AaG8AZ28AaHAAaG8CaXAAaG8BY24AaXABaG8AaG8AaW8CaG8DanABaXEvsUkAaW4ypWAwskkCaG8xs0oAaXABaW8AaXAEanAAaG4AaG8Aa28BaW73+fkFaXAwskkAaW8vsUkvsUoAaG8adnmTu74UgWQOc20wskkVcncws0sxskwwsEoxgYU5tVTC5c3s9+8qp1ERbnYtrU0poFcVcXYxsUomm10xskonfYUrfX8vnWqoyswZc3qGtLjh7u3S7dllwoCj26+209RVno9/zZAelFlkxXZOlJoWcnYgeHoAaG/7/PwwsUoAY2qfw8aav8IQbnUKaXDR4+Q+hos0gIYkdn3w9fXo8fLi7e7W5ufM3+FOkZYpe4IZcXfa6Om91th0qa3F2ty30dOvzc+BsLRcmp9HjZI/qrltAAAAUnRSTlMA8RghC/g1XuKkfrCeahNR2YQo0r487S4P9+ndqo1ky8RySUP+tbCS0MKXRvyinYduTTs06dHGvryoqJKReXBlUDgl8PDt1cGwr6yrp6SZjYFgOUTnlgAAAuRJREFUOMt9k1dX20AQRmd31bsly3I3tmMcagik997ragk2Di1AIAnk/z9mVrI5nMTkPniOvHP1zdFIkKOUy5Q+ebzw6POKdc+xi63IIIQsQMbV2VKpDP/yafm27AywVeV/4YDkihDiIUzB4hew/33nOcWG+2jegWkwMt0cbqbp9keA1YoQtTJMpfcf9RotzwlRugrT0S8cePeErzzEca/ABVCc+OArcjBYz5zD0f7+aMAPRqMDvlQT4nIZLsLh/EuKXNpb3OJ8cLInL36tb6TpN+MOjrsKHmPMA0TRNG9SJF1UpZhi7+BwU95kJ/0h1c2lUjaugzs2CgBaoKpBDHGERctuFUj12/pXlH4vong8GG6dSvXFXP50TW6ahuoqPaK7JIKZqt6uRiAp5OqWVHfS9CfPQPW1EJUHgCqhkBgBC2YArDo1igBtWwFEI6hu/9hO0yOpb0zUm9eFuFV9nKtQJ2GdR4VYAZsHVhdNSRFVZPfL4RBTNwe5eukdPqNlfm+szqsstFVO+pDIUhivFtXvW4ccl3Oc4sSjZ9eO+cZNXMx7wlEbpzKqUN/gGlU8PeBdkLCnabqHHjL4he6N67UbfPEDrrRomHqeqlVbMbHkO9+sYqLLfch4s7t7hGrG6dFLXMkr/hZ/H3QUQEy1WCSq7kWqpRtVFhHLDQjL1QUyHPIz7grMi24JMQc5fcMwWpieFFW15YOGJeoAkq/2HEuoVu6WREW+9mGCx5RSRbZ5WofKmiTUgzH9cyZZromMWTxo1ucdyNGZn7iF9thxGOTE6tir9tywPJuZlTXMRM9lzI2VuFnXw9D2Y0VzQ/Cb9kRVilmevZL9cf8s1Lfk4bxvaq2mrTc7db+RmL7TnfeNiQouJ7cXKOSsVaS6OlZZZ8aZcS2wQl0reI0mXjU0MM9U79H5r/LyOBRCUwGn06Bx3J6oeoF2213oMZjKWq0y9ySfxjYdsBp20ga3kKms13eo3TfYH6d+xYbyLO7jAAAAAElFTkSuQmCC"
+                            width="28px" height="12px" class="footer__img"></div>
+                    <p class="footer__info footer__info--title">Принимаем к оплате:</p>
+                    <div class="footer__pay footer__pay--cards"><img
+                            src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAADoAAAASCAMAAAA9mj1BAAAAkFBMVEUAAAAAWKAAWKAAW58AWKAAWKEAWKEAWKIAW6AAWKAAWKAAWKEAWKABV6IAWKAAWKIAWKEAV6AAWKAAWaMAWKD7phoAWaEAV6AAWKAAWaAAWaEAWJ8AWKASXZj8pxn1pR7/ohT0pB36phrvpCH8pxr5pBs/a4FVcnT7pRrfnihOcXUAWKD7phmHglieiUu5kjw4UhVPAAAAK3RSTlMA764Jy1aKGRLj1KKYILk2231uKMKuSy8+gnZjRP6bHwz66ZNuOeXlzcZIJvkjfQAAAblJREFUOMtVUumapDAIJEZbje3tqt3T11x76ey+/9sNBYl+XT8MQpEiAN1+KD4eJGgjxkQH/hYZHOV5MMbk1dkSkJ2PjAvMx+f72wrcSIgLw2VZw0fO5PS4BKSI20HsghT391dO/a2iCByoN3xUnFltmbmozvoTk0f58/+6vt1xqahNNOoNdFBiVMVmENFCU00acofla339ZCOB/0jU4Xwhm+PsUHidgFgbn1prIi6/fq0fbETwz0QFwjOlRmkb8HIHZ0eAf8G/G1cOb8wiMeouKRORJgm8NEdWpX1SWKZc/zy0zs5TnFYBRBflveBnOuj9gKf8ulsHjcw/qYAM5CU5w0xjWBY9NBPRft31r/T1FLrVEtiqiwzvTijVwyOVJNBMSX4mo4bqyCzKtRCNWd7J5ALEq2Vq/XtJNsl1yrPMuG1bpA4UcFo8LttiZBrZV2zfyafwxXtiKd+olRzn1JLtY1kQmdwOLSqww+snWAWebFxVDRLKS2mAETz1yWonGxlX4jtd7RomkfVwdc+oG1nXgLMwWrV9R92W6Uasy9bX6KlPfQSUYnferE9Vw+W5YrRcPZy9kkc2i2+pfE6WyfQr8wAAAABJRU5ErkJggg=="
+                            width="29px" height="9px" class="footer__img"> <img
+                            src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAADoAAAAjCAMAAADyvOlJAAAC+lBMVEUAAAD/sAD/49H/tQD/uwD/yAD/RVT/1QH/3+H/2CD/AQ//ABD/BBL/ugD/xQD/TVz/zQD/4h7/iZP/8gD/Chn/uAD/zQD/DR7/tQD/BhH/FCH/Nk3/Mjv/AAv/OkX/xAD/ABH/CR//xAD/Hi//1wX/ipT/o6n/s7n/7T3/5+L/3gD/pRz/85f/rAD/EyP/tAD/AA7/tgD/Gyj/vQD/wD7/pAD/Rk//Bxz/t0X/LFv/W2D/RHX/zX3/eIX/yz3/2hr/io7/dnz/3yr/3qT/ZG7/n6T/nJr/3gr/5H3/y0z/dHz/5AD/sLL/r5//MUP/kzr/4xf/xhz/5Iv/lgD/5Sj/zs7/vb3/2tn/5ev/6O3/7wD/GwD/rAD/ABH/////AAD/ABP/AAb/nQD/mwD/AAP/pwD/qQD/owD/AA7/AAr/qgD/oAD/gQD/qwD/awD/Kg//rgD/pQD/lgD/7/D/tAL/ggD/893/v8b/FxH/CRH/Nw3/SwX/mQD/kgD/+vr/9+j/3eH/7tD/6sP/maT/tRb/GBD/RAr/WgP/igD/hQD/egD/dQD//P7//fr/6uz/1dn/0tb/xcz/ucH/36L/1on/0Hf/Znb/wkv/uC7/ERH/IRD/Mgn/ZwL/KQH/sQD/4/f//fP/5Of/4eT/yN3/8tL/y9L/vcL/oq7/4av/3Zv/ipb/hY//f4z/d4T/VWb/TF//RFf/xFL/Mkf/wET/LDz/Ijj/BiH/FRH/Ug3/PQz/YAL/zAD/uQD/iAD/cgD/UgD/FQD/8v///Pb/xOn/5bX/5LD/3qn/k6D/j5v/1JL/aZD/goj/eIb/03//cH7/yF7/Vlv/klr/P0X/vDj/FS3/ECX/LRD/PAH/yAD/wQD/bwD/+vH/+vD/+e//0uj/9OH/s87/57r/q7P/q7H/xav/7KD/dpb/w4//V37/eXn/qnf/yHb/nHH/cW3/u2v/YmT/02L/LFL/wlD/T03/eUj/mzz/YzT/Gin/GiT/tiD/Ex//1wD/vQD/GwA8IFR1AAAAXHRSTlMA7gPXy5+PYR0F7+jWz7avjl1ZHOfn4uDf3tHNy8fEw7WyrJlrZ2JDKiEZEQvl4uLd29jEvLu6t6+ro5aUj4xubWdjXl1cXFZUVFJSUUpJSEhGRTUzMikmGBUTDWaYCx0AAARVSURBVEjHfZUFbNtQEECdUTtmZmZmZmYm535ihqZrYM2ylJm5K3fMzMzMzMzMTNJsZVuz9mtP1rd88tPdt+6fCWcmNihUq1iRYrULlXF1Djfu26NEa02lEqVcGhF4BtRgEBK0Oq1euXUY9ic8qB1LUxRv4CmKYtuWxohDiiGkVzwFZWUQqtZQDY8pQNEs+QeOovMPzCXm64KQYuSgExDqThDdKMpA/gNFFSzsbE6qgkSH6CQzqHMnA0vmhqPzN8kxJ5dDOsXM7dr2XL6ygyPzQDWf8rfaNkinxWD3vraLtZAYN3++32pJvLl52ubgNPftBozrVcdhNkQiTrWZvHeG7XTjLRhX8hpFqFTEJ01LnxEcHJy29aoHruTyqlkGaXEEm8Knq7ix2diS1d6oik+qTd88QyUtBJuWLkAQrgyj1+t1WmXJ6QnlKTzMzUGYhWR5nvtHNHCs1IRogARGURVT1OW0kl64dGmag/TpFikoSJKcVZYneReiENLFxy5Cm+JirUhFpy76+Q+2ZdrtuyMy7aG7w9/4AvjKJprmSVqWWSPtneKf4l2KqIU2AgA6BRBvO374xAW0Yfni40poy+XHh85mfXr24ewLgCUHDqQmJZ7M5pNTTls8TqYuhfXeNYnKaDVEmTfNA5g1C8xgPuMDELsqevaxO3tnw9snAPv3K+9RdADsA8/zAJCk1HB9joesIYqg5WCNOQKLYDXaeM4KfnAPoZWwIRDW2GDhYnh6LmoBzZFyUGrKbUiMDrDcgKD14M/z5YlWKMG8AiBuJaxbBn4xMWtiwPptGUxfAGYfSLg1Z/dHWGoiZY+D4LnPfyl4kJAYZoS7NK8hOiJz/Cql2pWQoOQ1+yBl2/EL/RD4bPhiWxe1aM978GRNlCekUtEBS4BfC0fd1kKSyaum8oUhcB3AxbnzrDArEOKWv1wGVp+oVYGw+PWJw3B0V4Q/QEAAwOmDkOgLdBDAIYC1716VIuqLfmsu+AUyc1d8ngdxsSsWAty/eGRuAnNs9t75j+af+bkn7OEcSDp/Ezx9kxcskeXkaPD3/Jr83IVw1TOiIDCCICLtJiTqGZ0OIUbUu1+LCN8VER4ZmWniJImXs7N5pSE50iB7SLzESVxZtYcFLSPq1AsJelFkGEEnMuLWkKysjIysjJmRVziWNZBGo2TkWLUfjazEkl7FHScHi3uku8o2tx0k/uQolMMfnS0hM1Uit7MYk65AqAxHIt7NDA0NDYn4gTFZafR/Z1Ooe4jdLmOTyiWajnVMxBZ417Zta4YJt1OqQtORgx2D3LUIdg6nu+/8bmExpqYsMVU1VRpXREKe6S+g2u0NXB5RoiuVJZxoVhLzz+lKEAVpOfc26TrNiH/pVxkh8a+oR6jKCDU8ND9NcTkZZbqlC5GHfPWrqfPF8aNiavT/E+9TwEjTssRxPEUZi/csTGAZ36tu9aJFi1av23uCc7hRvYIFNBpN8YL1xjmHfwFdoNC7AtboxgAAAABJRU5ErkJggg=="
+                            width="19px" height="11px" class="footer__img"> <img
+                            src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAD8AAAASCAMAAADbs/YFAAAAk1BMVEUAAABNtF1Ps19Ns15NtF1LtV5Mtl9OtVxLtF1NuF1Ot11MtF0Hkc9NtV5MtV1NtV5MtF5LtlwFmNRNtF4AtOcFlNUBpeBNt10Eodwrp5oAruJNs15Ns15NtV5Otl1Os11Rs14Eo9oAtucAsuYGlNAGltMAtOcCpt4CtOgAtOZNtF4AtOYBreICp9wEoNgFmtQGldHa6lxLAAAAKnRSTlMA1mDw90ZRti8hDYz9waqYfDU45NWFhCgWB9XRyqJuPhjVlvPiubBmRcUuE3+vAAABUklEQVQ4y43UaXOCMBCA4Q0BOZQj0Baognjb1KP//9d1N4BpADu+H9gZnGeQZSawZNgyFqAKkpBRM1iv2ok1FaOc8vhGfWKbzeZwKgCzpYo7iruyzQKHq0k3M6mawfZbdblcr7fb/b5PtZcR+bWc8LXsfboz/M8+1Z41AJBM+JI9PGxNvziUD2+vAYJwwltS++LL9IuUfFsC4POxb1Z/PBTbpz4s9aO0x3vaU+fjbuxDXHHmQ0x7HHj6InHvqeJ8+qDeqaL1c1KzgOEahOkF/s5E5/3INYuDzls4Yo/+iW/6Ci+113mPS7MEOp8zfExEwPQVXrPgibeToPeAluK56akYBt5WcVYj73y/5hBG3s4Hfu6oBGrt/ax9obGvYOAteKQ9uDS5GHnuveZrmqwceRde84KrVQ09d/737fmRAAQRHiMOQGOcHyFxyBnlQN6fKbpfeaxqK4ypl9AAAAAASUVORK5CYII="
+                            width="32px" height="9px" class="footer__img"></div>
+                </div>
+                <div class="footer__item"><a href="https://wowplaneda.com/policy.pdf" target="_blank" class="footer__info footer__info--link">Политика
+                    конфиденциальности</a> <a href="https://wowplaneda.com/offer.pdf" target="_blank" class="footer__info footer__info--link">Оферта</a>
+                    <a href="https://wowplaneda.com/unsubscribe" target="_blank"
+                       class="footer__info footer__info--link">Отменить подписку</a> <a href="https://wowplaneda.com/permission.pdf"
+                                                                                        target="_blank"
+                                                                                        class="footer__info footer__info--link">Политика
+                        обработки
+                        данных</a> <a href="https://wowplaneda.com/tariff.pdf" target="_blank"
+                                      class="footer__info footer__info--link">Тарифы</a> <a
+                            href="https://client.skill-pad.com/refund" target="_blank"
+                            class="footer__info footer__info--link">Возврат средств</a></div>
+            </div>
+        </div>
+    </footer> -->
+</div>
+<script src="js/scripts.js"></script>
+</body>
+</html>
