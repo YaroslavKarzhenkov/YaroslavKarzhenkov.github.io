@@ -1,0 +1,5 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target" : { "namespace": "android_app", "package_name": "io.yaroslavkarzhenkov.github",
+               "sha256_cert_fingerprints": ["SHA256: 9F:28:B2:52:0E:AE:DF:61:00:E0:F7:10:A9:26:A2:FB:90:AC:AB:20:AC:F1:B3:1A:C8:4B:6B:CE:8D:5C:9C:8F"] }
+}]
